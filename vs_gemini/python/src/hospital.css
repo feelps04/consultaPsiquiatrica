@@ -1,0 +1,71 @@
+/* Estilos gerais para centralizar o conteúdo e definir o fundo */
+body {
+    display: flex;
+    flex-direction: column; /* Organiza os elementos verticalmente */
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f0f0f0; /* Cor de fundo clara */
+    margin: 0;
+    font-family: sans-serif; /* Fonte padrão */
+    padding-top: 20px; /* Espaço no topo */
+}
+/* Estilos para o canvas onde a simulação é desenhada */
+canvas {
+    border: 1px solid #ccc; /* Borda cinza */
+    background-color: #fff; /* Fundo branco */
+    display: block;
+    max-width: 90%; /* Torna o canvas responsivo na largura */
+    max-height: 80vh; /* Torna o canvas responsivo na altura */
+    margin-top: 20px; /* Espaço entre os controles e o canvas */
+}
+/* Estilos para a caixa de mensagem flutuante */
+#message-box {
+    position: absolute; /* Posição fixa na tela */
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%); /* Centraliza horizontalmente */
+    background-color: rgba(0, 0, 0, 0.7); /* Fundo semi-transparente escuro */
+    color: white; /* Texto branco */
+    padding: 10px 20px;
+    border-radius: 5px;
+    display: none; /* Escondido por padrão */
+    z-index: 100; /* Garante que fique acima de outros elementos */
+    font-size: 1em;
+    text-align: center;
+}
+/* Estilos para o menu de personalização */
+#customization-menu {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Sombra suave */
+    margin-bottom: 20px;
+    text-align: center;
+}
+#customization-menu label {
+    margin-right: 10px;
+    font-weight: bold;
+}
+/* Estilos para os selects e botões dentro do menu */
+#customization-menu select,
+#customization-menu button {
+    padding: 8px;
+    margin-left: 5px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    cursor: pointer; /* Indica que é clicável */
+}
+/* Estilos específicos para o botão de iniciar */
+#customization-menu button {
+    background-color: #4CAF50; /* Cor de fundo verde */
+    color: white;
+    border: none;
+    margin-top: 15px;
+    padding: 10px 20px;
+    font-size: 1em;
+    transition: background-color 0.3s ease; /* Transição suave ao passar o mouse */
+}
+#customization-menu button:hover {
+    background-color: #45a049; /* Cor mais escura ao passar o mouse */
+}

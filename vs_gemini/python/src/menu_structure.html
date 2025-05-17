@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personalização do Avatar</title>
+    <link rel="stylesheet" href="menuStyle.css">
+    <style>
+        /* Estilos para o canvas e message-box podem ser mantidos aqui ou em outro CSS */
+        /* Para esta pré-visualização, vamos escondê-los */
+        canvas {
+            display: none; /* Oculta o canvas na tela inicial */
+        }
+
+        #message-box {
+             /* Estilos para a caixa de mensagem flutuante */
+            position: absolute;
+            top: 30px;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: rgba(2, 136, 209, 0.85); /* Azul mais escuro, tema hospital */
+            color: #fff;
+            padding: 15px 25px;
+            border-radius: 8px;
+            display: none; /* Inicialmente escondido */
+            z-index: 100;
+            font-size: 1.1em;
+            text-align: center;
+            box-shadow: 3px 3px 10px rgba(0,0,0,0.2);
+            max-width: 80%; /* Limita a largura para telas menores */
+        }
+    </style>
+</head>
+<body>
+
+<div id="customization-menu">
+    <h2>Personalize seu Avatar</h2>
+    <div id="character-image-container">
+        <img id="character-preview" src="https://placehold.co/150x200/cccccc/000000?text=Selecione" alt="Preview do Personagem">
+    </div>
+    <div>
+        <label for="gender">Gênero:</label>
+        <input type="radio" id="male" name="gender" value="male" checked>
+        <label for="male">Homem</label>
+        <input type="radio" id="female" name="gender" value="female">
+        <label for="female">Mulher</label>
+    </div>
+    <div style="margin-top: 10px;">
+        <label for="skin-color">Cor da Pele:</label>
+        <select id="skin-color">
+            <option value="white">Branca(o)</option>
+            <option value="black">Preta(o)</option>
+        </select>
+    </div>
+    <button id="start-button">Iniciar Simulação</button>
+</div>
+
+<canvas id="gameCanvas" width="900" height="650"></canvas>
+<div id="message-box"></div>
+
+<script src="menu.style.js" defer></script>
+
+</body>
+</html>
